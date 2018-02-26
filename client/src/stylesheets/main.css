@@ -1,0 +1,56 @@
+.brand-logo {
+  font-family: "Lobster", cursive;
+}
+
+.container {
+  width: 80%;
+}
+
+.garageSaleForm {
+  padding: 10px 0;
+}
+
+.garageSaleCarousel {
+  padding: 0px;
+}
+
+.loginButtonSection {
+  width: 370px;
+  margin: 10px auto;
+}
+
+.loginButton {
+  margin: 10px 0px;
+}
+
+.google {
+  background-color: red;
+  width: 100%;
+}
+
+.google:hover {
+  background-color: lightcoral;
+}
+
+.facebook {
+  background-color: #3b5998;
+  width: 100%;
+}
+
+.facebook:hover {
+  background-color: #4e69a2;
+}
+
+.twitter {
+  background-color: #00aced;
+  width: 100%;
+}
+
+.twitter:hover {
+  background-color: #1dcaff;
+}
+
+#map  {
+  height: 400px;
+  width: 100%;
+}
