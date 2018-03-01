@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const googleStrategy = require("passport-google-oauth20").Strategy;
 const twitterStrategy = require("passport-twitter").Strategy;
 const facebookStrategy = require("passport-facebook").Strategy;
-const keys = require("../config/keys");
+// const keys = require("../config/keys");
 
 const User = mongoose.model("User");
 
@@ -45,33 +45,33 @@ passport.use(
 );
 
 // Twitter strategy setup
-// passport.use(
-//   new twitterStrategy(
-//     {
-//       consumerKey: keys.twitterconsumerKey,
-//       consumerSecret: keys.twitterconsumerSecret,
-//       callbackURL: "/auth/twitter/callback"
-//     },
-//     (accessToken, refreshToken, profile, done) => {
-//       console.log(accessToken);
-//       console.log(refreshToken);
-//       console.log(profile);
-//     }
-//   )
-// );
+passport.use(
+  new twitterStrategy(
+    {
+      consumerKey: process.env.TWITTER_CONSUMER_KEY,
+      consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
+      callbackURL: "/auth/twitter/callback"
+    },
+    (accessToken, refreshToken, profile, done) => {
+      console.log(accessToken);
+      console.log(refreshToken);
+      console.log(profile);
+    }
+  )
+);
 
 // Facebook strategy setup
-// passport.use(
-//   new facebookStrategy(
-//     {
-//       clientID: keys.facebookClientID,
-//       clientSecret: keys.facebookClientSecret,
-//       callbackURL: "/auth/facebook/callback"
-//     },
-//     (accessToken, refreshToken, profile, done) => {
-//       console.log(accessToken);
-//       console.log(refreshToken);
-//       console.log(profile);
-//     }
-//   )
-// );
+passport.use(
+  new facebookStrategy(
+    {
+      clientID: process.env.FACEBOOK_CLIENT_ID,
+      clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
+      callbackURL: "/auth/facebook/callback"
+    },
+    (accessToken, refreshToken, profile, done) => {
+      console.log(accessToken);
+      console.log(refreshToken);
+      console.log(profile);
+    }
+  )
+);
