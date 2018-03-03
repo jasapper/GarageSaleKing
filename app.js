@@ -86,6 +86,6 @@ if (process.env.NODE_ENV === "production") {
 
 //starting the node server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, process.env.IP, function() {
+app.listen(PORT, function() {
   console.log("GarageSaleKing is online");
 });
