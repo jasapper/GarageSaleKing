@@ -4,11 +4,9 @@ const express = require("express"),
   passport = require("passport"),
   bodyParser = require("body-parser"),
   session = require("express-session"),
-  mongoStore = require("connect-mongo")(session),
+  mongoStore = require("connect-mongo")(session);
   
-  keys = require("./config/keys");
-  
-var logger = require("morgan");
+// var logger = require("morgan");
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/GarageSaleKing";
 
 //requiring models
@@ -42,7 +40,7 @@ app.use(function(req, res, next) {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(logger('dev'));
+// app.use(logger('dev'));
 
 //setting up app to use express session
 app.use(

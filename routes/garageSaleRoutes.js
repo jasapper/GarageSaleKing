@@ -6,7 +6,7 @@ const multerS3 = require("multer-s3");
 const shortid = require("shortid");
 const geocoder = require("geocoder");
 const GarageSale = mongoose.model("GarageSale");
-const keys = require("../config/keys");
+// const keys = require("../config/keys");
 
 const router = express.Router();
 
