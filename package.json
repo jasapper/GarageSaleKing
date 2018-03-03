@@ -12,14 +12,14 @@
     "server": "nodemon app.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server \" \"npm run client\" ",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=true npm install --prefix client && npm run build --prefix client"
   },
   "author": "Jason",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.150.0",
-    "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
     "concurrently": "^3.5.1",
     "connect-mongo": "^2.0.0",
     "dotenv": "^5.0.0",

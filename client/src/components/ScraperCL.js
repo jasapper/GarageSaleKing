@@ -4,7 +4,7 @@ const Nightmare = require("nightmare")
 const nightmare = Nightmare({ show: true })
 
 nightmare
-.goto('http://advapps.trb.com/osgaragesales/?q=&section=events%3Agarage&radius=50&addr=32801')
+.goto('https://www.searchtempest.com/search?location=32803&maxDist=25&search_string=&keytype=adv&Region=na&cityselect=zip&page=0&category=8&subcat=gms&minAsk=min&maxAsk=max&minYear=min&maxYear=max&q=+%5Binurl%3Agms+%5D+inurl%3A%28gms%29')
 .end()
 .then(function (result) {
   console.log(result)
