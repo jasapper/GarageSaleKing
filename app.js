@@ -7,7 +7,7 @@ const express = require("express"),
   mongoStore = require("connect-mongo")(session);
   
 // var logger = require("morgan");
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/GarageSaleKing";
+var MONGODB_URI = process.env.MONGODB_URI;
 
 //requiring models
 require("./models/user");
