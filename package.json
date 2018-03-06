@@ -2,6 +2,7 @@
   "name": "garage-sale-king",
   "version": "1.0.0",
   "description": "GarageSaleKing",
+  "homepage": "https://garagesaleking.gq",
   "main": "app.js",
   "engines": {
     "node": "8.9.4",
@@ -13,7 +14,7 @@
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server \" \"npm run client\" "
   },
-  "author": "Jason",
+  "author": "Jason Apfel",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.150.0",

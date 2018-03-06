@@ -122,7 +122,7 @@ export default class Dashboard extends Component {
             <div>
               {this.state.timeout ? (
                 <div>
-                  <h4>Tired of waiting click below to view all garage sales</h4>
+                  <h4>Tired of waiting? Click below to view all garage sales regardless of proximity to you.</h4>
                   <button onClick={this.onClick}>View All Garage Sales</button>
                 </div>
               ) : (
