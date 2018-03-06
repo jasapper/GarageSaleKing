@@ -26,7 +26,7 @@ export default class GarageSaleDetail extends Component {
           <div className="col s12">
             <h3 className="cyan-text text-darken-3">{garageSale.location}</h3>
             <h5 className="cyan-text text-darken-3">
-              Opened {garageSale.startDate} Closes {garageSale.endDate}
+              Opens {garageSale.startDate} Closes {garageSale.endDate}
             </h5>
           </div>
           <div className="col s12 garageSaleCarousel center-align">
@@ -40,6 +40,7 @@ export default class GarageSaleDetail extends Component {
           {garageSale.startDate} <br />
           {garageSale.endDate} <br />
         </div>
+
       </div>
     );
   }

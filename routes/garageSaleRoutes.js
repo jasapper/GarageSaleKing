@@ -97,6 +97,10 @@ router.post(
   (req, res, next) => {
     //Add longitude, Latitude and formated address to the garage sale
     geocoder.geocode(req.body.location, (err, data) => {
+      //add error handling
+       if (err) throw err;
+      console.log(data.results[0].geometry.location.lat);
+      
       const lat = data.results[0].geometry.location.lat;
       const lng = data.results[0].geometry.location.lng;
       const location = data.results[0].formatted_address;
@@ -122,9 +126,9 @@ router.post(
         newGarageSale.images = fileNames;
       }
 
-      newGarageSale.save((err, createdGarageSale) => {
+      newGarageSale.save(function(err, createdGarageSale) {
         if (err) {
-          //If garage sale is not saved, then the uploaded images will be deleted
+          // If garage sale is not saved, then the uploaded images will be deleted
           if (req.files.length > 0) {
             req.files.forEach(file => {
               s3.deleteObject(
@@ -137,12 +141,15 @@ router.post(
             });
           }
         } else {
-          res.redirect("/garagesales");
+          return res.redirect("/garagesales")
+          console.log("Should be a redirect if no error in save");  
         }
-      });
-    });
-  }
-);
+        //end of the save
+      })
+      //end of geocoder
+    })
+    //end of router post
+  });
 
 router.get("/api/garagesales/:id", (req, res) => {
   GarageSale.findById(req.params.id, (err, foundGarageSale) => {
