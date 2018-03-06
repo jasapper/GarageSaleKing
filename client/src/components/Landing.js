@@ -1,16 +1,19 @@
 import React, { Component } from "react";
+import bgimage from "./GSK-web2.jpg";
+
 
 export default class Landing extends Component {
+
+
   render() {
     return (
       <div>
-        <h2>Landing Page</h2>
+        <a href="/garagesales"><img src={bgimage} id="landing-img" alt="background"/></a>
+        <h1>GarageSaleKing</h1>
         <h3>
-          The first page shown to arriving user, this page will cycle through a set of pictures
-          in the background. There will be buttons for the user to login, signup or view all garage
-          sales around thier location.
+          Find garage/yard sale events near you and post your own!
           <div>
-            <a href="/garagesales">View the garage sales around you</a>
+            <a href="/garagesales">Go to the sales!</a>
           </div>
         </h3>
       </div>
