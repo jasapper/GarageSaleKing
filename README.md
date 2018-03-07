@@ -6,10 +6,10 @@ A single page app (SPA) to offer a crowd-sourced collection of nearby garage/yar
 * __Redux__ for application state management
 * __ExpressJS__ middleware
 * __NodeJS__ backend
-* __MongoDB__ database
+* __MongoDB__ database (web-scale! ;)
 * __PassportJS__ for authentication
 * __AWS S3__ for image storage
-* __Geocoder__ module for Google location proximities
+* __Geocoder__ library for finding user's location
 * __MaterializeCSS__ for styling eye candy
 
 ## Deployment
@@ -29,4 +29,4 @@ You should now be ready to start the development server by running `npm run dev`
 If the React init did not open your default browser you can browse manually to `http://localhost:3000`.
 
 ## Future Development
-Adding aggregation of external garage sale sources to show alongside user created events. Scraping Craigslist and local newspaper web sites would be ideal but have employed various methods of defeating most scrapers so this enhancement will require significant time and resources. NightmareJS should take care of this nicely (but not easily). Stay tuned!
+Adding aggregation of external garage sale sources to show alongside user created events. Scraping Craigslist and local newspaper web sites would be ideal but they have employed various methods of defeating most scrapers so this enhancement will require significant time and resources. NightmareJS should take care of this nicely (but not easily). Stay tuned!

@@ -110,7 +110,7 @@ router.post(
         endDate: req.body.endDate,
         description: req.body.description,
         location: location,
-        coords: [lng, lat],
+        coordinates: [lng, lat],
         creator: {
           id: req.user._id,
           username: req.user.username
