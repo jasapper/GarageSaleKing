@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 
 const garageSaleSchema = new mongoose.Schema({
   location: String, // Stored as coordinates longitude, latitude order
-  coords: {
+  coordinates: {
     type: [Number],
     index: "2dsphere"
   },
   createdAt: { type: Date, Default: Date.now },
-  startDate: Date,
-  endDate: Date,
+  startDate: String,
+  endDate: String,
   description: String,
   images: [{ type: String }],
   creator: {
